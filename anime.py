@@ -2,9 +2,10 @@ import streamlit as st
 from huggingface_hub import InferenceClient
 from PIL import Image
 import datetime
+import os
 
 # Connect to HuggingFace
-client = InferenceClient(token="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")
+client = InferenceClient(token=os.getenv("HF_TOKEN"))
 
 MODEL = "stabilityai/stable-diffusion-xl-base-1.0"
 
