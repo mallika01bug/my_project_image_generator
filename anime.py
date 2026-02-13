@@ -9,7 +9,7 @@ client = InferenceClient(token=os.getenv("HF_TOKEN"))
 
 MODEL = "stabilityai/stable-diffusion-xl-base-1.0"
 
-st.set_page_config(page_title="AI Image Generator", page_icon="🖼️")
+st.set_page_config(page_title="AI Image Generator")
 st.title("🖼️ AI Image Generator")
 st.write("Type a description, choose a style, and let AI create an image")
 
@@ -36,7 +36,7 @@ if st.button("Generate") and prompt:
         st.image(image, caption=final_prompt)
 
         # Save image
-        filename = f"ai_image_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
-        image.save(filename)
+        #filename = f"ai_image_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        #image.save(filename)
 
-        st.success(f"Image saved as {filename}")
+       # st.success(f"Image saved as {filename}")
